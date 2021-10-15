@@ -1,5 +1,8 @@
 # MACISH_MAC
-Self-healing approximate MAC verilog implementation based on the MACISH work by G. A. Gillani et al. [1] and the verilog mac implementation by Intel [2].
+An 8x8 Self-healing approximate MAC verilog implementation based on the MACISH work by G. A. Gillani et al. [1] and the verilog mac implementation by Intel [2].
+
+Default Config:
+// ISH_1 | M4 M1 M1 M1 | M1 M1 M4 M1 | M1 M1 M1 M1 | M3 M4 M1 M4 |
 
 
 Sources:
