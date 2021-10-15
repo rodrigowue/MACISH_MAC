@@ -1,4 +1,4 @@
-# MACISH_MAC
+# 8x8 Self-Healing Approx MAC
 An 8x8 Self-healing approximate MAC verilog implementation based on the MACISH work by G. A. Gillani et al. [1] and the verilog mac implementation by Intel [2].
 
 Default Config:
