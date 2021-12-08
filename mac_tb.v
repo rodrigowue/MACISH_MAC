@@ -9,6 +9,7 @@ module mac_tb;
 	logic [15:0] adder_out;
   logic clk, aclr, clken, sload;
   integer seed,i,j,exact;
+  real relative_error;
   //reset Generation
   initial begin
     clk = 0;
@@ -22,8 +23,8 @@ module mac_tb;
     clken=1;
     sload=1;
     #0.5 sload=0;
-    $display("A, B, Approx Result, Exact Result");
-      for (i=0; i<1000000; i=i+1)
+    $display("A, B, Approx Result, Exact Result, Relative Error [\%]");
+      for (i=0; i<10000; i=i+1)
         begin
            clken=1;
            dataa=$urandom%255;
@@ -32,7 +33,14 @@ module mac_tb;
            sload=1;
            #2 sload=0;
            #1 clken=0;
-           #1 $display("%d, %d, %d, %d",dataa,datab,adder_out, exact);
+	   if (exact > adder_out) begin
+		   relative_error = -(adder_out-exact);
+	   	   relative_error = (relative_error/exact)*100;
+	   end else begin
+		   relative_error = (adder_out-exact);
+	   	   relative_error = (relative_error/exact)*100;
+	   end
+	   #1 $display("%d, %d, %d, %d, %f",dataa,datab,adder_out, exact, relative_error);
     end
     $finish;
   end
