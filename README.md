@@ -1,5 +1,5 @@
 # 8x8 Self-Healing Approx MAC
-An 8x8 Self-healing approximate MAC verilog implementation based on the MACISH work by G. A. Gillani et al. [1], K. Raben approx. multipliers VHDL implementation [2] and the verilog mac implementation by Intel [3].
+An 8x8 Self-healing approximate multiply–accumulate (MAC) Verilog implementation based on the MACISH work by G. A. Gillani et al. [1], K. Raben approx. multipliers VHDL implementation [2] and the verilog mac implementation by Intel [3].
 
 Default Config:
 // ISH_1 | M4 M1 M1 M1 | M1 M1 M4 M1 | M1 M1 M1 M1 | M3 M4 M1 M4 |
